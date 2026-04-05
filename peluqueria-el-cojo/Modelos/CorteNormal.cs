@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace peluqueria_el_cojo.Modelos
 {
-    internal class CorteNormal
+    public class CorteNormal : Servicio
     {
+        public CorteNormal() : base("Corte Normal", 200, 30)
+        {
+        }
+
+        public override double CalcularPrecio()
+        {
+            return PrecioBase;
+        }
     }
 }
