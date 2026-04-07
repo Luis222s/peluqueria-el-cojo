@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace peluqueria_el_cojo.Atributos
 {
-    internal class ValidacionAttribute
+    public abstract class ValidacionAttribute : Attribute
     {
+        public abstract bool EsValido(object valor);
+        public abstract string MensajeError { get; }
     }
 }

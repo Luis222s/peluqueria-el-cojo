@@ -8,21 +8,18 @@ namespace peluqueria_el_cojo
         {
             InitializeComponent();
 
-            List<Servicio> servicios = new List<Servicio>();
+            List<Producto> productos = new List<Producto>();
 
-            servicios.Add(new CorteNormal());
-            servicios.Add(new Degradado(3));
-            servicios.Add(new Afeitado(true));
-            servicios.Add(new CorteCejas());
+            Producto p1 = new Producto("001", "Gel", "Cabello", 200, 100, 10, 3);
+            Producto p2 = new Producto("001", "Gel duplicado", "Cabello", 200, 100, 5, 3);
 
-            double total = 0;
-
-            foreach (var s in servicios)
+            if (p1.Equals(p2))
             {
-                total += s.CalcularPrecio();
+                MessageBox.Show("Producto duplicado detectado");
             }
 
-            MessageBox.Show($"Total: RD${total}");
+            Producto copia = (Producto)p1.Clone();
+            MessageBox.Show($"Clonado: {copia.Nombre}");
         }
     }
 }
