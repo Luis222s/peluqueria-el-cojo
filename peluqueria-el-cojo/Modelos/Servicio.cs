@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace peluqueria_el_cojo.Modelos
 {
-    public class Servicio
+    public class Servicio : IFacturable
     {
         public string Nombre { get; set; }
         public double PrecioBase { get; set; }
@@ -22,6 +22,10 @@ namespace peluqueria_el_cojo.Modelos
         public virtual double CalcularPrecio()
         {
             return PrecioBase;
+        }
+        public virtual string GenerarLineaRecibo()
+        {
+            return $"{Nombre} - RD${CalcularPrecio()}";
         }
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace peluqueria_el_cojo.Modelos
 {
-    internal class IFacturable
+    public interface IFacturable
     {
+        double CalcularPrecio();
+        string GenerarLineaRecibo();
     }
 }
