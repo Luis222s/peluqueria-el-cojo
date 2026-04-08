@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace peluqueria_el_cojo.Modelos
 {
-    using System;
-
-    namespace PeluqueriaElCojo.Modelos
-    {
         public class Cliente
         {
             private string nombre;
@@ -86,5 +82,4 @@ namespace peluqueria_el_cojo.Modelos
                 return Nombre.Contains(criterio) || Telefono.Contains(criterio);
             }
         }
-    }
 }
