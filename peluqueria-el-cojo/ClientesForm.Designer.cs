@@ -28,12 +28,139 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ClientesForm";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesForm));
+            label3 = new Label();
+            label5 = new Label();
+            btnBuscar = new Button();
+            cmbTipo = new ComboBox();
+            txtTelefono = new TextBox();
+            txtNombre = new TextBox();
+            label2 = new Label();
+            btnAgregar = new Button();
+            dgvClientes = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
+            SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(326, 237);
+            label3.Name = "label3";
+            label3.Size = new Size(44, 21);
+            label3.TabIndex = 16;
+            label3.Text = "Tipo";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(291, 195);
+            label5.Name = "label5";
+            label5.Size = new Size(78, 21);
+            label5.TabIndex = 15;
+            label5.Text = "Telefono";
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscar.Location = new Point(291, 285);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(83, 34);
+            btnBuscar.TabIndex = 14;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // cmbTipo
+            // 
+            cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipo.FormattingEnabled = true;
+            cmbTipo.Location = new Point(387, 235);
+            cmbTipo.Name = "cmbTipo";
+            cmbTipo.Size = new Size(121, 23);
+            cmbTipo.TabIndex = 13;
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.Location = new Point(387, 193);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(121, 23);
+            txtTelefono.TabIndex = 12;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(387, 154);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(121, 23);
+            txtNombre.TabIndex = 11;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(291, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(74, 21);
+            label2.TabIndex = 10;
+            label2.Text = "Nombre";
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregar.Location = new Point(425, 285);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(83, 34);
+            btnAgregar.TabIndex = 17;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // dgvClientes
+            // 
+            dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvClientes.Location = new Point(251, 335);
+            dgvClientes.Name = "dgvClientes";
+            dgvClientes.ReadOnly = true;
+            dgvClientes.Size = new Size(323, 150);
+            dgvClientes.TabIndex = 18;
+            // 
+            // ClientesForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(800, 490);
+            Controls.Add(dgvClientes);
+            Controls.Add(btnAgregar);
+            Controls.Add(label3);
+            Controls.Add(label5);
+            Controls.Add(btnBuscar);
+            Controls.Add(cmbTipo);
+            Controls.Add(txtTelefono);
+            Controls.Add(txtNombre);
+            Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "ClientesForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ClientesForm";
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label3;
+        private Label label5;
+        private Button btnBuscar;
+        private ComboBox cmbTipo;
+        private TextBox txtTelefono;
+        private TextBox txtNombre;
+        private Label label2;
+        private Button btnAgregar;
+        private DataGridView dgvClientes;
     }
 }

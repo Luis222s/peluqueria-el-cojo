@@ -28,12 +28,181 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FacturacionForm";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturacionForm));
+            label5 = new Label();
+            cmbClientes = new ComboBox();
+            label1 = new Label();
+            cmbEmpleados = new ComboBox();
+            cmbServicios = new ComboBox();
+            label2 = new Label();
+            btnAgregarServicio = new Button();
+            btnIniciarFactura = new Button();
+            btnGenerarFactura = new Button();
+            lstServicios = new ListBox();
+            label3 = new Label();
+            lblTotal = new Label();
+            SuspendLayout();
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(222, 144);
+            label5.Name = "label5";
+            label5.Size = new Size(65, 21);
+            label5.TabIndex = 41;
+            label5.Text = "Cliente";
+            label5.Click += label5_Click;
+            // 
+            // cmbClientes
+            // 
+            cmbClientes.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbClientes.FormattingEnabled = true;
+            cmbClientes.Location = new Point(306, 142);
+            cmbClientes.Name = "cmbClientes";
+            cmbClientes.Size = new Size(121, 23);
+            cmbClientes.TabIndex = 40;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(213, 182);
+            label1.Name = "label1";
+            label1.Size = new Size(87, 21);
+            label1.TabIndex = 43;
+            label1.Text = "Empleado";
+            // 
+            // cmbEmpleados
+            // 
+            cmbEmpleados.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEmpleados.FormattingEnabled = true;
+            cmbEmpleados.Location = new Point(306, 180);
+            cmbEmpleados.Name = "cmbEmpleados";
+            cmbEmpleados.Size = new Size(121, 23);
+            cmbEmpleados.TabIndex = 42;
+            // 
+            // cmbServicios
+            // 
+            cmbServicios.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbServicios.FormattingEnabled = true;
+            cmbServicios.Location = new Point(306, 220);
+            cmbServicios.Name = "cmbServicios";
+            cmbServicios.Size = new Size(121, 23);
+            cmbServicios.TabIndex = 44;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(213, 222);
+            label2.Name = "label2";
+            label2.Size = new Size(81, 21);
+            label2.TabIndex = 45;
+            label2.Text = "Servicios";
+            // 
+            // btnAgregarServicio
+            // 
+            btnAgregarServicio.Font = new Font("Segoe UI Symbol", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregarServicio.Location = new Point(449, 184);
+            btnAgregarServicio.Name = "btnAgregarServicio";
+            btnAgregarServicio.Size = new Size(140, 34);
+            btnAgregarServicio.TabIndex = 47;
+            btnAgregarServicio.Text = "AgregarServicio";
+            btnAgregarServicio.UseVisualStyleBackColor = true;
+            // 
+            // btnIniciarFactura
+            // 
+            btnIniciarFactura.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIniciarFactura.Location = new Point(449, 144);
+            btnIniciarFactura.Name = "btnIniciarFactura";
+            btnIniciarFactura.Size = new Size(140, 34);
+            btnIniciarFactura.TabIndex = 46;
+            btnIniciarFactura.Text = "IniciarFactura";
+            btnIniciarFactura.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerarFactura
+            // 
+            btnGenerarFactura.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGenerarFactura.Location = new Point(449, 224);
+            btnGenerarFactura.Name = "btnGenerarFactura";
+            btnGenerarFactura.Size = new Size(140, 34);
+            btnGenerarFactura.TabIndex = 48;
+            btnGenerarFactura.Text = "GenerarFactura";
+            btnGenerarFactura.UseVisualStyleBackColor = true;
+            // 
+            // lstServicios
+            // 
+            lstServicios.FormattingEnabled = true;
+            lstServicios.ItemHeight = 15;
+            lstServicios.Location = new Point(222, 294);
+            lstServicios.Name = "lstServicios";
+            lstServicios.Size = new Size(205, 109);
+            lstServicios.TabIndex = 49;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(449, 314);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 21);
+            label3.TabIndex = 50;
+            label3.Text = "Total:";
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.BackColor = Color.Transparent;
+            lblTotal.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(449, 354);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(19, 21);
+            lblTotal.TabIndex = 51;
+            lblTotal.Text = "a";
+            // 
+            // FacturacionForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lblTotal);
+            Controls.Add(label3);
+            Controls.Add(lstServicios);
+            Controls.Add(btnGenerarFactura);
+            Controls.Add(btnAgregarServicio);
+            Controls.Add(btnIniciarFactura);
+            Controls.Add(label2);
+            Controls.Add(cmbServicios);
+            Controls.Add(label1);
+            Controls.Add(cmbEmpleados);
+            Controls.Add(label5);
+            Controls.Add(cmbClientes);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FacturacionForm";
+            Text = "FacturacionForm";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+        private Label label5;
+        private ComboBox cmbClientes;
+        private Label label1;
+        private ComboBox cmbEmpleados;
+        private ComboBox cmbServicios;
+        private Label label2;
+        private Button btnAgregarServicio;
+        private Button btnIniciarFactura;
+        private Button btnGenerarFactura;
+        private ListBox lstServicios;
+        private Label label3;
+        private Label lblTotal;
     }
 }

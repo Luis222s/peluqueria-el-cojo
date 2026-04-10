@@ -5,22 +5,24 @@ namespace peluqueria_el_cojo
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private Usuario usuario;
+        public Form1(Usuario usuario)
         {
             InitializeComponent();
 
-            Cliente cliente = new Cliente("Luis", "8091234567", TipoCliente.VIP);
-            Empleado emp = new Empleado("Juan", "El duro", "001", "8091111111", Rol.Barbero, 10000, 0.10);
+            this.usuario = usuario;
 
-            Factura factura = new Factura(cliente, emp);
 
-            factura.AgregarServicio(new CorteNormal());
-            factura.AgregarServicio(new Degradado(2));
-            factura.AgregarServicio(new Afeitado(true));
+        }
 
-            string recibo = factura.GenerarRecibo();
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-            MessageBox.Show(recibo);
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
