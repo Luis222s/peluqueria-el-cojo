@@ -43,7 +43,7 @@ namespace peluqueria_el_cojo
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            new RegistroForm().ShowDialog();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpleadosForm));
             label3 = new Label();
-            label5 = new Label();
+            l = new Label();
             cmbRol = new ComboBox();
-            txtApodo = new TextBox();
+            txtClave = new TextBox();
             txtNombre = new TextBox();
             label2 = new Label();
             label1 = new Label();
@@ -40,7 +40,6 @@
             txtCedula = new TextBox();
             label4 = new Label();
             btnAgregar = new Button();
-            btnRanking = new Button();
             dgvEmpleados = new DataGridView();
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
@@ -58,16 +57,16 @@
             label3.TabIndex = 22;
             label3.Text = "Rol";
             // 
-            // label5
+            // l
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(231, 170);
-            label5.Name = "label5";
-            label5.Size = new Size(61, 21);
-            label5.TabIndex = 21;
-            label5.Text = "Apodo";
+            l.AutoSize = true;
+            l.BackColor = Color.Transparent;
+            l.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            l.Location = new Point(231, 170);
+            l.Name = "l";
+            l.Size = new Size(53, 21);
+            l.TabIndex = 21;
+            l.Text = "Clave";
             // 
             // cmbRol
             // 
@@ -78,12 +77,12 @@
             cmbRol.Size = new Size(121, 23);
             cmbRol.TabIndex = 20;
             // 
-            // txtApodo
+            // txtClave
             // 
-            txtApodo.Location = new Point(314, 168);
-            txtApodo.Name = "txtApodo";
-            txtApodo.Size = new Size(121, 23);
-            txtApodo.TabIndex = 19;
+            txtClave.Location = new Point(314, 168);
+            txtClave.Name = "txtClave";
+            txtClave.Size = new Size(121, 23);
+            txtClave.TabIndex = 19;
             // 
             // txtNombre
             // 
@@ -142,24 +141,13 @@
             // btnAgregar
             // 
             btnAgregar.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregar.Location = new Point(484, 197);
+            btnAgregar.Location = new Point(484, 134);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(83, 34);
             btnAgregar.TabIndex = 28;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
-            // 
-            // btnRanking
-            // 
-            btnRanking.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRanking.Location = new Point(484, 139);
-            btnRanking.Name = "btnRanking";
-            btnRanking.Size = new Size(83, 34);
-            btnRanking.TabIndex = 27;
-            btnRanking.Text = "Rank";
-            btnRanking.UseVisualStyleBackColor = true;
-            btnRanking.Click += btnRanking_Click;
             // 
             // dgvEmpleados
             // 
@@ -194,15 +182,14 @@
             Controls.Add(pictureBox2);
             Controls.Add(dgvEmpleados);
             Controls.Add(btnAgregar);
-            Controls.Add(btnRanking);
             Controls.Add(label1);
             Controls.Add(txtTelefono);
             Controls.Add(txtCedula);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label5);
+            Controls.Add(l);
             Controls.Add(cmbRol);
-            Controls.Add(txtApodo);
+            Controls.Add(txtClave);
             Controls.Add(txtNombre);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
@@ -219,9 +206,9 @@
         #endregion
 
         private Label label3;
-        private Label label5;
+        private Label l;
         private ComboBox cmbRol;
-        private TextBox txtApodo;
+        private TextBox txtClave;
         private TextBox txtNombre;
         private Label label2;
         private Label label1;
@@ -229,7 +216,6 @@
         private TextBox txtCedula;
         private Label label4;
         private Button btnAgregar;
-        private Button btnRanking;
         private DataGridView dgvEmpleados;
         private PictureBox pictureBox2;
     }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using peluqueria_el_cojo.Utilidades;
+using peluqueria_el_cojo.Servicios;
 
 namespace peluqueria_el_cojo
 {
@@ -28,7 +29,16 @@ namespace peluqueria_el_cojo
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtClave.Text) ||
+                string.IsNullOrWhiteSpace(txtTelefono.Text) ||
+                string.IsNullOrWhiteSpace(txtCedula.Text) ||
+                cmbRol.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe completar todos los campos");
+                return;
+            }
+            /*try
             {
                 Empleado emp = new Empleado(
                     txtNombre.Text,
@@ -53,13 +63,49 @@ namespace peluqueria_el_cojo
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }*/
+            
+
+            bool creado = AuthService.Registrar(
+                txtNombre.Text,
+                txtClave.Text,
+                (Rol)cmbRol.SelectedItem);
+
+            if (creado)
+            {
+                try
+                {
+                    Empleado emp = new Empleado(
+                        txtNombre.Text,
+                        txtClave.Text,
+                        txtCedula.Text,
+                        txtTelefono.Text,
+                        (Rol)cmbRol.SelectedItem,
+                        10000,
+                        0.10
+                    );
+
+                    DatosGlobales.Empleados.Add(emp);
+                    ActualizarGrid();
+                    MessageBox.Show("Empleado agregado correctamente");
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
+            else
+            {
+                MessageBox.Show("Error: usuario ya existe");
+            }
+            
         }
 
         private void btnRanking_Click(object sender, EventArgs e)
         {
-            DatosGlobales.Empleados.Sort();
-            ActualizarGrid();
+            
         }
 
         private void ActualizarGrid()
