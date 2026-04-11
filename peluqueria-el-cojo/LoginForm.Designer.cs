@@ -32,6 +32,7 @@
             txtUsuario = new TextBox();
             txtPassword = new TextBox();
             btnLogin = new Button();
+            btnRegistro = new Button();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -65,13 +66,25 @@
             // 
             btnLogin.Cursor = Cursors.Hand;
             btnLogin.Font = new Font("Segoe UI Symbol", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(86, 382);
+            btnLogin.Location = new Point(86, 357);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(92, 32);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Log in";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
+            // 
+            // btnRegistro
+            // 
+            btnRegistro.Cursor = Cursors.Hand;
+            btnRegistro.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistro.Location = new Point(86, 405);
+            btnRegistro.Name = "btnRegistro";
+            btnRegistro.Size = new Size(92, 33);
+            btnRegistro.TabIndex = 3;
+            btnRegistro.Text = "Registro";
+            btnRegistro.UseVisualStyleBackColor = true;
+            btnRegistro.Click += btnRegistro_Click;
             // 
             // pictureBox2
             // 
@@ -108,6 +121,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Controls.Add(btnRegistro);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUsuario);
@@ -126,6 +140,7 @@
         private TextBox txtUsuario;
         private TextBox txtPassword;
         private Button btnLogin;
+        private Button btnRegistro;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
     }

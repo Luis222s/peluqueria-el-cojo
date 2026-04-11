@@ -9,7 +9,7 @@ namespace peluqueria_el_cojo.Modelos
     public class Empleado : IComparable<Empleado>
     {
         private string nombre;
-        private string clave;
+        private string apodo;
         private string cedula;
         private string telefono;
         private Rol rol;
@@ -28,10 +28,10 @@ namespace peluqueria_el_cojo.Modelos
             }
         }
 
-        public string Clave
+        public string Apodo
         {
-            get { return Clave; }
-            set { Clave = value; }
+            get { return apodo; }
+            set { apodo = value; }
         }
 
         public string Cedula
@@ -90,10 +90,10 @@ namespace peluqueria_el_cojo.Modelos
             private set { totalVentas = value; }
         }
 
-        public Empleado(string nombre, string clave, string cedula, string telefono, Rol rol, double salarioBase, double porcentajeComision)
+        public Empleado(string nombre, string apodo, string cedula, string telefono, Rol rol, double salarioBase, double porcentajeComision)
         {
             Nombre = nombre;
-            Clave = clave;
+            Apodo = apodo;
             Cedula = cedula;
             Telefono = telefono;
             Rol = rol;
