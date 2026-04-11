@@ -1,0 +1,39 @@
+Codigo sql:
+Create database PeluqueriaBD;
+
+use PeluqueriaDB
+
+CREATE TABLE Usuarios (
+    Id INT PRIMARY KEY IDENTITY,
+    Username VARCHAR(50),
+    Password VARCHAR(50),
+    Rol VARCHAR(20)
+);
+
+ALTER TABLE Usuarios
+ADD CONSTRAINT UQ_Username UNIQUE (Username);
+
+INSERT INTO Usuarios (Username, Password, Rol)
+VALUES ('admin', '1234', 'Administrador');
+
+CREATE TABLE Clientes (
+Id INT PRIMARY KEY IDENTITY,
+    Nombre VARCHAR(50),
+    Tipo VARCHAR(50),
+    Numero VARCHAR(20)
+	);
+
+	CREATE TABLE Empleados (
+Id INT PRIMARY KEY IDENTITY,
+    Nombre VARCHAR(50),
+    Cedula VARCHAR(50),
+    Numero VARCHAR(20)
+	);
+
+	CREATE TABLE Inventario (
+Id INT PRIMARY KEY IDENTITY,
+    Nombre VARCHAR(50),
+    Codigo VARCHAR(50),
+    Stock int,
+	Costo int,
+	);
