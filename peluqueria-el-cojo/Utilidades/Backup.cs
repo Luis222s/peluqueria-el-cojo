@@ -11,7 +11,8 @@ namespace peluqueria_el_cojo.Utilidades
         public static void Guardar(string contenido)
         {
             string ruta = "backup.txt";
-            File.WriteAllText(ruta, contenido);
+
+            File.AppendAllText(ruta, contenido + "\n-----------------\n");
         }
     }
 }

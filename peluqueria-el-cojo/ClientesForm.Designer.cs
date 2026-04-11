@@ -38,7 +38,9 @@
             label2 = new Label();
             btnAgregar = new Button();
             dgvClientes = new DataGridView();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label3
@@ -72,6 +74,7 @@
             btnBuscar.TabIndex = 14;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // cmbTipo
             // 
@@ -116,6 +119,7 @@
             btnAgregar.TabIndex = 17;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // dgvClientes
             // 
@@ -126,6 +130,19 @@
             dgvClientes.Size = new Size(323, 150);
             dgvClientes.TabIndex = 18;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(741, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(47, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 19;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
             // ClientesForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -133,6 +150,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 490);
+            Controls.Add(pictureBox2);
             Controls.Add(dgvClientes);
             Controls.Add(btnAgregar);
             Controls.Add(label3);
@@ -146,7 +164,9 @@
             Name = "ClientesForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ClientesForm";
+            Load += ClientesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,5 +182,6 @@
         private Label label2;
         private Button btnAgregar;
         private DataGridView dgvClientes;
+        private PictureBox pictureBox2;
     }
 }

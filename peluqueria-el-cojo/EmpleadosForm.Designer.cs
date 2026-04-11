@@ -41,8 +41,10 @@
             label4 = new Label();
             btnAgregar = new Button();
             btnRanking = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvEmpleados = new DataGridView();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label3
@@ -146,6 +148,7 @@
             btnAgregar.TabIndex = 28;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnRanking
             // 
@@ -156,14 +159,30 @@
             btnRanking.TabIndex = 27;
             btnRanking.Text = "Rank";
             btnRanking.UseVisualStyleBackColor = true;
+            btnRanking.Click += btnRanking_Click;
             // 
-            // dataGridView1
+            // dgvEmpleados
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(231, 297);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(336, 150);
-            dataGridView1.TabIndex = 29;
+            dgvEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEmpleados.Location = new Point(231, 297);
+            dgvEmpleados.Name = "dgvEmpleados";
+            dgvEmpleados.ReadOnly = true;
+            dgvEmpleados.Size = new Size(336, 150);
+            dgvEmpleados.TabIndex = 29;
+            dgvEmpleados.CellClick += dgvEmpleados_CellClick;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(741, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(47, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 30;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // EmpleadosForm
             // 
@@ -172,7 +191,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox2);
+            Controls.Add(dgvEmpleados);
             Controls.Add(btnAgregar);
             Controls.Add(btnRanking);
             Controls.Add(label1);
@@ -187,8 +207,11 @@
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EmpleadosForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EmpleadosForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += EmpleadosForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvEmpleados).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -207,6 +230,7 @@
         private Label label4;
         private Button btnAgregar;
         private Button btnRanking;
-        private DataGridView dataGridView1;
+        private DataGridView dgvEmpleados;
+        private PictureBox pictureBox2;
     }
 }

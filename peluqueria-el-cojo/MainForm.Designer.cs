@@ -35,10 +35,6 @@
             btnFacturacion = new Button();
             lblNombre = new Label();
             btnCerrar = new Button();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnClientes
@@ -56,6 +52,7 @@
             btnClientes.TabIndex = 0;
             btnClientes.Text = "Clientes";
             btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += btnClientes_Click;
             // 
             // btnEmpleados
             // 
@@ -72,6 +69,7 @@
             btnEmpleados.TabIndex = 1;
             btnEmpleados.Text = "Empleados";
             btnEmpleados.UseVisualStyleBackColor = false;
+            btnEmpleados.Click += btnEmpleados_Click;
             // 
             // btnInventario
             // 
@@ -88,6 +86,7 @@
             btnInventario.TabIndex = 2;
             btnInventario.Text = "Inventario";
             btnInventario.UseVisualStyleBackColor = false;
+            btnInventario.Click += btnInventario_Click;
             // 
             // btnFacturacion
             // 
@@ -104,6 +103,7 @@
             btnFacturacion.TabIndex = 3;
             btnFacturacion.Text = "Facturacion";
             btnFacturacion.UseVisualStyleBackColor = false;
+            btnFacturacion.Click += btnFacturacion_Click;
             // 
             // lblNombre
             // 
@@ -128,32 +128,9 @@
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(224, 35);
             btnCerrar.TabIndex = 5;
-            btnCerrar.Text = "Cerrar sesion";
+            btnCerrar.Text = "Cerrar programa";
             btnCerrar.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(673, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(47, 24);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(741, 12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(47, 24);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 7;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // Form1
             // 
@@ -162,8 +139,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(btnCerrar);
             Controls.Add(lblNombre);
             Controls.Add(btnFacturacion);
@@ -174,8 +149,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,7 +162,5 @@
         private Button btnFacturacion;
         private Label lblNombre;
         private Button btnCerrar;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
     }
 }

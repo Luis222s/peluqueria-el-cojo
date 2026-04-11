@@ -54,5 +54,10 @@ namespace peluqueria_el_cojo
                 MessageBox.Show("Error: usuario ya existe");
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            new LoginForm().ShowDialog();
+        }
     }
 }

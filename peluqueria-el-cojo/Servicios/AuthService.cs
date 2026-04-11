@@ -13,7 +13,7 @@ namespace peluqueria_el_cojo.Servicios
     {
         public static Usuario Login(string username, string password)
         {
-            using (SqlConnection conn = Conexion.ObtenerConexion())
+            using (var conn = Conexion.ObtenerConexion())
             {
                 conn.Open();
 
@@ -30,7 +30,7 @@ namespace peluqueria_el_cojo.Servicios
                     return new Usuario(
                         reader["Username"].ToString(),
                         reader["Password"].ToString(),
-                        Enum.Parse<Rol>(reader["Rol"].ToString())
+                        (Rol)Enum.Parse(typeof(Rol), reader["Rol"].ToString())
                     );
                 }
 

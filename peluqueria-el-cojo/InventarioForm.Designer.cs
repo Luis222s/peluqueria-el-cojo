@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventarioForm));
-            dataGridView1 = new DataGridView();
+            dgvProductos = new DataGridView();
             btnAgregar = new Button();
             txtStock = new TextBox();
             label3 = new Label();
@@ -41,16 +41,20 @@
             txtCodigo = new TextBox();
             txtNombre = new TextBox();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(251, 288);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(321, 150);
-            dataGridView1.TabIndex = 50;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProductos.Location = new Point(251, 288);
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.ReadOnly = true;
+            dgvProductos.Size = new Size(321, 150);
+            dgvProductos.TabIndex = 50;
+            dgvProductos.CellClick += dgvProductos_CellClick;
             // 
             // btnAgregar
             // 
@@ -61,6 +65,7 @@
             btnAgregar.TabIndex = 49;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // txtStock
             // 
@@ -153,6 +158,19 @@
             label2.TabIndex = 39;
             label2.Text = "Nombre";
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(741, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(47, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 51;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
             // InventarioForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -160,7 +178,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox2);
+            Controls.Add(dgvProductos);
             Controls.Add(btnAgregar);
             Controls.Add(txtStock);
             Controls.Add(label3);
@@ -174,15 +193,17 @@
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InventarioForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "InventarioForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvProductos;
         private Button btnAgregar;
         private TextBox txtStock;
         private Label label3;
@@ -194,5 +215,6 @@
         private TextBox txtCodigo;
         private TextBox txtNombre;
         private Label label2;
+        private PictureBox pictureBox2;
     }
 }

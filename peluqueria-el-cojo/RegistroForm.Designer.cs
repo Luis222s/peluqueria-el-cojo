@@ -37,6 +37,8 @@
             btnRegistrar = new Button();
             label5 = new Label();
             label3 = new Label();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -118,6 +120,19 @@
             label3.TabIndex = 9;
             label3.Text = "Rol";
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(741, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(47, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 31;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
             // RegistroForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -125,6 +140,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox2);
             Controls.Add(label3);
             Controls.Add(label5);
             Controls.Add(btnRegistrar);
@@ -138,6 +154,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RegistroForm";
             Load += RegistroForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,5 +169,6 @@
         private Button btnRegistrar;
         private Label label5;
         private Label label3;
+        private PictureBox pictureBox2;
     }
 }

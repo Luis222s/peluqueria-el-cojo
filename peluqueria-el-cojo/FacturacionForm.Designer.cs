@@ -38,9 +38,12 @@
             btnAgregarServicio = new Button();
             btnIniciarFactura = new Button();
             btnGenerarFactura = new Button();
-            lstServicios = new ListBox();
             label3 = new Label();
             lblTotal = new Label();
+            dgvServicios = new DataGridView();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dgvServicios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label5
@@ -113,6 +116,7 @@
             btnAgregarServicio.TabIndex = 47;
             btnAgregarServicio.Text = "AgregarServicio";
             btnAgregarServicio.UseVisualStyleBackColor = true;
+            btnAgregarServicio.Click += btnAgregarServicio_Click;
             // 
             // btnIniciarFactura
             // 
@@ -123,6 +127,7 @@
             btnIniciarFactura.TabIndex = 46;
             btnIniciarFactura.Text = "IniciarFactura";
             btnIniciarFactura.UseVisualStyleBackColor = true;
+            btnIniciarFactura.Click += btnIniciarFactura_Click;
             // 
             // btnGenerarFactura
             // 
@@ -133,22 +138,14 @@
             btnGenerarFactura.TabIndex = 48;
             btnGenerarFactura.Text = "GenerarFactura";
             btnGenerarFactura.UseVisualStyleBackColor = true;
-            // 
-            // lstServicios
-            // 
-            lstServicios.FormattingEnabled = true;
-            lstServicios.ItemHeight = 15;
-            lstServicios.Location = new Point(222, 294);
-            lstServicios.Name = "lstServicios";
-            lstServicios.Size = new Size(205, 109);
-            lstServicios.TabIndex = 49;
+            btnGenerarFactura.Click += btnGenerarFactura_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(449, 314);
+            label3.Location = new Point(468, 314);
             label3.Name = "label3";
             label3.Size = new Size(53, 21);
             label3.TabIndex = 50;
@@ -159,11 +156,33 @@
             lblTotal.AutoSize = true;
             lblTotal.BackColor = Color.Transparent;
             lblTotal.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(449, 354);
+            lblTotal.Location = new Point(468, 353);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(19, 21);
+            lblTotal.Size = new Size(0, 21);
             lblTotal.TabIndex = 51;
-            lblTotal.Text = "a";
+            lblTotal.Click += lblTotal_Click;
+            // 
+            // dgvServicios
+            // 
+            dgvServicios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvServicios.Location = new Point(222, 288);
+            dgvServicios.Name = "dgvServicios";
+            dgvServicios.ReadOnly = true;
+            dgvServicios.Size = new Size(240, 150);
+            dgvServicios.TabIndex = 52;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(741, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(47, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 53;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // FacturacionForm
             // 
@@ -172,9 +191,10 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox2);
+            Controls.Add(dgvServicios);
             Controls.Add(lblTotal);
             Controls.Add(label3);
-            Controls.Add(lstServicios);
             Controls.Add(btnGenerarFactura);
             Controls.Add(btnAgregarServicio);
             Controls.Add(btnIniciarFactura);
@@ -186,7 +206,11 @@
             Controls.Add(cmbClientes);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FacturacionForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FacturacionForm";
+            Load += FacturacionForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvServicios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -201,8 +225,9 @@
         private Button btnAgregarServicio;
         private Button btnIniciarFactura;
         private Button btnGenerarFactura;
-        private ListBox lstServicios;
         private Label label3;
         private Label lblTotal;
+        private DataGridView dgvServicios;
+        private PictureBox pictureBox2;
     }
 }

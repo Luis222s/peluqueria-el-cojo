@@ -89,6 +89,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(741, 12);
             pictureBox2.Name = "pictureBox2";
@@ -101,6 +102,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(673, 12);
             pictureBox1.Name = "pictureBox1";
